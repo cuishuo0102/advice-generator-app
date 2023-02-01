@@ -10,7 +10,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; color: white }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   <script src="./index.js"></script>
@@ -19,13 +19,13 @@
 <body>
   <div class="page">
     <div class="adv">
-      <div class="number">Advice #117</div>
-      <div class="content">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</div>
+      <div class="number">Advice #<span id="number">117</span></div>
+      <div class="content">"<span id="content">It is easy to sit up and take notice, what's difficult is getting up and taking action.</span>"</div>
       <picture class="divider">
         <source srcset="./images/pattern-divider-desktop.svg" media="(min-width: 1024px)">
         <img src="./images/pattern-divider-mobile.svg">
       </picture>
-      <button class="next-btn">
+      <button id="next" class="next-btn">
         <img src="./images/icon-dice.svg">
       </button>
     </div>
