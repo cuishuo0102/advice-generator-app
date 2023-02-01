@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans&display=swap");
+body {
+  margin: 0;
+}
+
+.page {
+  height: 100vh;
+  background-color: hsl(218deg, 23%, 16%);
+  padding: 0.05px;
+}
+.page .adv {
+  position: relative;
+  width: 492px;
+  height: 280px;
+  margin: 216px auto;
+  padding: 24px;
+  background-color: hsl(219deg, 19%, 24%);
+  border-radius: 16px;
+  font-family: manrope;
+  text-align: center;
+}
+@media (max-width: 425px) {
+  .page .adv {
+    margin: 120px auto;
+    width: 80%;
+    height: 264px;
+    border-radius: 12px;
+  }
+}
+.page .adv .number {
+  padding: 24px 0;
+  color: hsl(150deg, 100%, 66%);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+}
+@media (max-width: 425px) {
+  .page .adv .number {
+    padding: 16px 0;
+    font-size: 12px;
+  }
+}
+.page .adv .content {
+  padding: 0 14px;
+  color: hsl(193deg, 38%, 86%);
+  font-size: 28px;
+}
+@media (max-width: 425px) {
+  .page .adv .content {
+    margin-top: 8px;
+    font-size: 24px;
+  }
+}
+.page .adv .divider {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media (max-width: 425px) {
+  .page .adv .divider {
+    margin-top: -12px;
+  }
+}
+.page .adv .next-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 999px;
+  background-color: hsl(150deg, 100%, 66%);
+  cursor: pointer;
+}
+.page .adv .next-btn:hover {
+  box-shadow: 0 5px 15px 1px hsl(150deg, 100%, 66%);
+}
+.page .adv .next-btn > img {
+  width: 24px;
+  display: block;
+  margin: auto;
+}
+
+/*# sourceMappingURL=index.css.map */
