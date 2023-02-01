@@ -55,7 +55,6 @@ To change the loaded img base on media query, the most easy way is to use the pi
 - implement with Vue.js 2
 - implement with Vue.js 3
 - implement with React
-- implement with Angular
 
 ### Useful resources
 
