@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans&display=swap');
+
+$mobile-s-breakpoint: 425px;
+$laptop-breakpoint: 1024px;
+
+$color-light-cyan: hsl(193, 38%, 86%);
+$color-neon-green: hsl(150, 100%, 66%);
+
+$color-grayish-blue: hsl(217, 19%, 38%);
+$color-dark-grayish-blue: hsl(219, 19%, 24%);
+$color-dark-blue: hsl(218, 23%, 16%);
+
+body { margin: 0 }
+
+.page {
+  height: 100vh;
+  background-color: $color-dark-blue;
+  padding: 0.05px;
+
+  .adv {
+    position: relative;
+    width: 492px;
+    height: 280px;
+    margin: 216px auto;
+    padding: 24px;
+    background-color: $color-dark-grayish-blue;
+    border-radius: 16px;
+    font-family: manrope;
+    text-align: center;
+
+    @media (max-width: $mobile-s-breakpoint) {
+      margin: 120px auto;
+      width: 80%;
+      height: 264px;
+      border-radius: 12px;
+    }
+
+    .number {
+      padding: 24px 0;
+      color: $color-neon-green;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+
+      @media (max-width: $mobile-s-breakpoint) {
+        padding: 16px 0;
+        font-size: 12px;
+      }
+    }
+
+    .content {
+      padding: 0 14px;
+      color: $color-light-cyan;
+      font-size: 28px;
+
+      @media (max-width: $mobile-s-breakpoint) {
+        margin-top: 8px;
+        font-size: 24px;
+      }
+    }
+
+    .divider {
+      padding: 36px 0;
+      display: block;
+      @media (max-width: $mobile-s-breakpoint) {
+        margin-top: -12px;
+      }
+    }
+
+    .next-btn {
+      $length: 64px;
+
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: $length;
+      height: $length;
+      border: none;
+      border-radius: 999px;
+      background-color: $color-neon-green;
+
+      >img {
+        width: 24px;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
+  #adv-content {
+
+  }
+}
