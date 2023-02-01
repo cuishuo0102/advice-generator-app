@@ -1,14 +1,50 @@
+<template>
+  <div class="page">
+    <div class="adv">
+      <div class="number">Advice #{{ slip.num }}</div>
+      <div class="content">"{{ slip.content }}"</div>
+      <picture class="divider">
+        <source srcset="../images/pattern-divider-desktop.svg" media="(min-width: 1024px)">
+        <img src="../images/pattern-divider-mobile.svg">
+      </picture>
+      <button class="next-btn" @click="nextAdvice">
+        <img src="../images/icon-dice.svg">
+      </button>
+    </div>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/cuishuo0102">cuishuo0102</a>.
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      slip: {
+        num: 117,
+        content: "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+      }
+    }
+  },
+  mounted() {
+    this.nextAdvice();
+  },
+  methods: {
+    async nextAdvice() {
+      const { slip } = await (await fetch('https://api.adviceslip.com/advice')).json();
+      this.slip = { num: slip.id, content: slip.advice };
+    }
+  }
+}
+</script>
+
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Open+Sans&display=swap');
-
-$mobile-s-breakpoint: 425px;
-$laptop-breakpoint: 1024px;
-
-$color-light-cyan: hsl(193, 38%, 86%);
-$color-neon-green: hsl(150, 100%, 66%);
-
-$color-grayish-blue: hsl(217, 19%, 38%);
-$color-dark-grayish-blue: hsl(219, 19%, 24%);
-$color-dark-blue: hsl(218, 23%, 16%);
+@import "./variables.scss";
 
 body { margin: 0 }
 
@@ -96,3 +132,4 @@ body { margin: 0 }
     }
   }
 }
+</style>
